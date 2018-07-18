@@ -374,8 +374,7 @@
 	
 	<div class="clearfix"></div>
 </div>
-<!--END ФОРМА ДЛЯ МОБИЛЬНЫХ-->
-
+<!--END ФОРМА ДЛЯ МОБИЛЬНЫХ1-->
 <div class="container-fluid hidden-xs" style="  " id="animate-block">
 	<div class="container" style="padding:0px;">
 		<div class="row">
@@ -401,7 +400,7 @@
 <!--КОНЕЦ ФОРМЫ-->
 
 <script>
-	/*PAGINATION */
+	/*PAGINATION 1111111111111111111111*/
 	$(".pagination a").click(function(e){
 		e.preventDefault();
 		$('<button>', {id:'pagbutton', name: 'pagbutton', style:'display:none'}).appendTo('#filter-form');
