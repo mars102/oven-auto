@@ -374,7 +374,7 @@
 	
 	<div class="clearfix"></div>
 </div>
-<!--END ФОРМА ДЛЯ МОБИЛЬНЫХ111-->
+<!--END ФОРМА ДЛЯ МОБИЛЬНЫХ-->
 <div class="container-fluid hidden-xs" style="  " id="animate-block">
 	<div class="container" style="padding:0px;">
 		<div class="row">
