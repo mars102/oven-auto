@@ -73,7 +73,7 @@ Class car_available extends \app\core\Model
 				$res = 'А/м в наличии';
 				break;
 			case '2':
-				$res = 'Готов к отгрузке';
+				$res = 'Гото 	в к отгрузке';
 				break;
 			case '3':
 				if(!empty($date))
@@ -520,70 +520,58 @@ Class car_available extends \app\core\Model
 					</i>-->
 				<div style="padding-top: 15px;" class="visible-xs";>
 					<!--Звезда которая на мобилках-->
-					<div style="position: relative; float: right; text-align: center; display: inline-block;">
-						<div 
-								class="available-star visible-xs" 
-								id="car-select" 
-								style=" position: relative;  margin: auto; border-radius: 100%; z-index: 99;  border: 1px double #dcdcdc;
-										width: 40px;
-										height: 40px;" 
-
-								check="<?=$status;?>" 
-								data-param="<?=$car->id;?>"
-							>
-								<div class="" style="position: absolute;
-									left: 50%;
-									top: 50%;
-									transform: translate(-50%, -50%);
-									width: 28px;
-									height: 30px;
-									transition: .3s;">
-									<i 
-										class="icon-star fa fa-star-o" 
-										style="color:<?=$color;?>;font-size:30px; margin-top 0px;"
-
-									>
-									</i>
-								</div>
-						</div>
-						<div style="padding-top: 5px; font-size: 10px;">Запомнить</div>
-					</div>
-					<!--Машинка слева-->
-					<?php 
-					$temp=explode("/", $_SERVER['REQUEST_URI']);
-					if ($temp[2]!="viewcar") : ?>
-					<div style="position: relative; float:left; text-align: center; display: inline-block;">
-						<div 
-							class="icon-hover  available-star visible-xs" 
+					<div 
+							class="available-star visible-xs" 
 							id="car-select" 
-							style=" position: relative; margin: auto; border-radius: 100%; z-index: 99;  border: 1px double #dcdcdc;
+							style=" position: relative; float:right;  margin: auto; border-radius: 100%; z-index: 99;  border: 1px double #dcdcdc;
 									width: 40px;
 									height: 40px;" 
+
 							check="<?=$status;?>" 
 							data-param="<?=$car->id;?>"
-							>
+						>
 							<div class="" style="position: absolute;
-									left: 50%;
-									top: 50%;
-									transform: translate(-50%, -50%);
-									width: 34px;
-									height: 34px;
-									transition: .3s;">
-								<a href="/content/viewcar/<?=$car->model->link;?>">
-									<i 
-										class="sub-b icofont icofont-auto-mobile"
-										style="font-size:33px;margin-top:0px; color:#ddd;" 
-									>
-									</i>
-						
-								</a>
+								left: 50%;
+								top: 50%;
+								transform: translate(-50%, -50%);
+								width: 28px;
+								height: 30px;
+								transition: .3s;">
+								<i 
+									class="icon-star fa fa-star-o" 
+									style="color:<?=$color;?>;font-size:30px; margin-top 0px;"
+
+								>
+								</i>
 							</div>
-							
-						</div>
-						<div style="margin: 0 auto; padding-top: 5px; font-size: 10px;">О модели</div>
 					</div>
+					<!--Машинка слева-->
+					<div 
+						class="icon-hover  available-star visible-xs" 
+						id="car-select" 
+						style=" position: relative; float:left;  margin: auto; border-radius: 100%; z-index: 99;  border: 1px double #dcdcdc;
+								width: 40px;
+								height: 40px;" 
+						check="<?=$status;?>" 
+						data-param="<?=$car->id;?>"
+						>
+						<div class="" style="position: absolute;
+								left: 50%;
+								top: 50%;
+								transform: translate(-50%, -50%);
+								width: 34px;
+								height: 34px;
+								transition: .3s;">
+							<a href="/content/viewcar/<?=$car->model->name;?>">
+								<i 
+									class="sub-b icofont icofont-auto-mobile"
+									style="font-size:33px;margin-top:0px; color:#ddd;" 
+								>
+								</i>
 					
-				<?php endif;?>
+							</a>
+						</div>
+					</div>
 				</div>
 
 					<div style="width: 90%; margin:auto; " class="hidden-xs">
@@ -746,7 +734,7 @@ Class car_available extends \app\core\Model
 				
 					
 					
-					<div class="motorinfo hidden-xs" style="padding-bottom: 9px; font-size: 16px;">
+					<div class="motorinfo hidden-xs" style="padding-bottom: 9px;">
 						<?=$car->year;?>
 						<?=$complect->name;?>
 						<?=$motor->getMotorForUser($model->type);?>

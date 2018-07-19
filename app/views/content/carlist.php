@@ -277,13 +277,14 @@
 				</button>
 			</div>
 		</div>
-	
+
+
 
 
 		<!--КНОПКИ ДЛЯ МАЛОГО ДИСПЛЕЯ-->
-		
-		
-			
+		<div class="visible-xs" style="padding-bottom: 10px;">
+			<div class="" style="">
+				<div class="col-lg-12">
 					<!--div class="col-xs-6" style="padding:5px;">
 						<button style="width:100%;display:block;<?//=$_SESSION['cartcolor'];?>" class="filter-sort non-border" form="filter-form" name="selectedcars" type="submit">
 							<i class="fa fa-star-o" aria-hidden="true"></i> Выбранные (<span class="cart-from"><?//=\app\core\Html::getCountCart();?></span>)
@@ -299,23 +300,23 @@
 						<?php //endif;?>
 					</div-->
 
-				<div class="container visible-xs" style="display:block; padding-top: 10px;">
-					<div class="row " style="padding: 0px;">
-						<div class="col-xs-6" style="padding:5px 5px 5px 0px;">
-							<button style="width:100%;display:block; text-align: center;<?=$_SESSION['sortmincolor'];?>" class="filter-sort non-border" form="filter-form" name="sortmintomax" type="submit">
+					<div class="clearfix"></div>
+					<div class="row container">
+						<div class="col-xs-6" style="padding:5px;">
+							<button style="width:100%;display:block;<?=$_SESSION['sortmincolor'];?>" class="filter-sort non-border" form="filter-form" name="sortmintomax" type="submit">
 								<i class="fa fa-sort-amount-asc"></i> Сначала дешёвые
 							</button>
 						</div>
-						<div class="col-xs-6" style="padding:5px 0px 5px 5px;">
-							<button style="width:100%;text-align: center; <?=$_SESSION['sortmaxcolor'];?>" class="filter-sort" form="filter-form" name="sortmaxtomin" type="submit">
+						<div class="col-xs-6" style="padding:5px;">
+							<button style="float: right; <?=$_SESSION['sortmaxcolor'];?>" class="filter-sort" form="filter-form" name="sortmaxtomin" type="submit">
 								<i class="fa fa-sort-amount-desc"></i> Сначала дорогие
 							</button>
 						</div>
 					</div>
 				</div>
-				
-			
-		<!--END КНОПКИ ДЛЯ МАЛЕНЬКОГО ЭКРАНА-->
+			</div>
+		</div>
+		<!--КНОПКИ ДЛЯ МАЛЕНЬКОГО ЭКРАНА-->
 
 
 		
@@ -344,8 +345,8 @@
 			<?php echo $pagination->getPagButtons();?>
 		</div>
 	
-	</div>
 </div>
+
 <!--ЗАКРЫВАЕТ АРЕА КОНТЕЙНЕР-->
 </div>
 
@@ -359,7 +360,7 @@
 	</div>
 	<br>
 	<div style="float: left ;width: 50%; text-align: center;">
-		<a id="call" class="phone iconsize pulsar-2" href="tel:+78212288588">
+		<a id="call" class="phone iconsize pulsar-2" href="tel:+8(8212)288-588">
 			<span style="color: #71c766;"  class="fa fa-phone" aria-hidden="true"></span>
 		</a>
 		<div class="phone-desc">Позвонить сейчас</div>
@@ -375,6 +376,7 @@
 	<div class="clearfix"></div>
 </div>
 <!--END ФОРМА ДЛЯ МОБИЛЬНЫХ-->
+
 <div class="container-fluid hidden-xs" style="  " id="animate-block">
 	<div class="container" style="padding:0px;">
 		<div class="row">
@@ -400,7 +402,7 @@
 <!--КОНЕЦ ФОРМЫ-->
 
 <script>
-	/*PAGINATION 1111111111111111111111*/
+	/*PAGINATION*/
 	$(".pagination a").click(function(e){
 		e.preventDefault();
 		$('<button>', {id:'pagbutton', name: 'pagbutton', style:'display:none'}).appendTo('#filter-form');

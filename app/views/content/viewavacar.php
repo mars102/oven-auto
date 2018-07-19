@@ -13,7 +13,7 @@
 
 			<!--Количесво машин в продаже данной марки-->
 			<div class="col-sm-4 col-xs-4 hidden-xs" style="padding: 0px;">
-				<a target="_blank" href="/content/viewcar/<?=$car->model->link;?>">
+				<a target="_blank" href="/content/viewcar/<?=$car->model->name;?>">
 						<i 
 							class="hovicon effect-3 sub-b icofont icofont-auto-mobile"
 							style="display:block;margin:auto;margin-top:0px;" 
@@ -488,6 +488,7 @@
 	            <span style="background: <?=$background;?>;border:1px solid #bbb;width: 20px;height: 20px; border-radius: 100%; display: inline-block;float: right;"></span>
 	            <div style="height: 15px;"></div>
 	            <div class="clearfix"></div>
+
 	            <?php if(!empty($car->packs)) : ?>
 					<?php foreach ($car->packs as $key => $pack) : ?>
 
@@ -495,14 +496,12 @@
 							<?= $pack->name;?>
 						</div>
 						<div class="pack-list text-left">
-							<?= $pack->option_list;?> 
+							<?= $pack->option_list;?>
 						</div>
-						<div class="pack-price text-right" style="position: relative; ">
+						<div class="pack-price text-right">
 							<div style="border-top:1px dashed #ccc"></div>
-
-							<p > <span style="float: left; font-size: 14px; color: #8c8c8c;" ><?= $pack->code;?></span><?=number_format($pack->price,0,'',' ');?> руб.</p>
+							<p ><?=number_format($pack->price,0,'',' ');?> руб.</p>
 						</div>
-
 					<?php endforeach; ?>
 				<?php endif;?>
 	           
@@ -637,7 +636,7 @@
 	</div>
 	<br>
 	<div style="float: left ;width: 50%; text-align: center;">
-		<a id="call" class="phone iconsize pulsar-2" href="tel:+78212288588">
+		<a id="call" class="phone iconsize pulsar-2" href="tel:+8(8212)288-588">
 			<span style="color: #71c766;"  class="fa fa-phone" aria-hidden="true"></span>
 		</a>
 		<div class="phone-desc">Позвонить сейчас</div>

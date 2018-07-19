@@ -14,19 +14,28 @@ define ('DEFAULT_CLASS','Content');
 define ('DEFAULT_METHOD','Index');
 
 define('BASE_HOST', 'localhost');
-define('BASE_NAME', 'basa');
+define('BASE_NAME', 'oa_renault');
 define('BASE_USER', 'admin');
 define('BASE_PASS', 'admin');
 
-/*DEFINE('BASE_HOST', 'localhost');
+/*
+DEFINE('BASE_HOST', 'localhost');
 DEFINE('BASE_NAME', 'myrenault');
 DEFINE('BASE_USER', 'myrenault');
 DEFINE('BASE_PASS', 'h7dBzZyCBPxWbntx');
-  */  
+*/
+  
 define('BRAND',1);
 $autoloader = 'autoloader\\' . "autoloader";
 $autoloader = new $autoloader;
 
+
+
 $app = new \app\core\Router();
 $app->run();
+
+
+$counter = new \app\core\userCounter();
+$counter->start();
+
 

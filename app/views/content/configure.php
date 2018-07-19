@@ -213,7 +213,7 @@
               <div class=""><?=$pack->name;?></div>
               <div class="pack-list text-left"><?=$pack->option_list;?></div>
               <div style="border-top:1px dashed #ccc"></div>
-              <div class="pack-price text-right " style="position: relative;">
+              <div class="pack-price text-right " style="">
                 <p style="text-align: left;">
                   <input 
                     <?=$check;?>
@@ -227,7 +227,6 @@
                     form = "userModal"
                   >
                   <label style="display: inline;" for="checkbox<?=$pack->id;?>"></label>
-                  <span style="font-size: 15px; color: #8c8c8c;"><?= $pack->code;?></span>
                   <span style="float: right;"><?=number_format($pack->price,0,'',' ');?> руб.</span>
                 </p>
               </div>
@@ -241,7 +240,7 @@
               <div class=""><?=$pack->name;?></div>
               <div class="pack-list text-left"><?=$pack->option_list;?></div>
               <div style="border-top:1px dashed #ccc"></div>
-              <div class="pack-price text-right " style="position: relative;">
+              <div class="pack-price text-right " style="">
                 <p style="text-align: left;">
                   <input 
                     <?=$check;?>
@@ -255,7 +254,6 @@
                     form = "userModal"
                   >
                   <label style="display: inline;" for="checkbox<?=$pack->id;?>"></label>
-                  <span style="font-size: 15px; color: #8c8c8c;"><?= $pack->code;?></span>
                   <span style="float: right;"><?=number_format($pack->price,0,'',' ');?> руб.</span>
                 </p>
               </div>
@@ -280,7 +278,7 @@
               <div class=""><?=$pack->name;?></div>
               <div class="pack-list text-left"><?=$pack->option_list;?></div>
               <div style="border-top:1px dashed #ccc"></div>
-              <div class="pack-price text-right " style="position: relative;">
+              <div class="pack-price text-right " style="">
                 <p style="text-align: left;">
                   <input 
                     <?=$check;?>
@@ -294,7 +292,6 @@
                     form = "userModal"
                   >
                   <label style="display: inline;" for="checkbox<?=$pack->id;?>"></label>
-                  <span style="font-size: 15px; color: #8c8c8c;"><?= $pack->code;?></span>
                   <span style="float: right;"><?=number_format($pack->price,0,'',' ');?> руб.</span>
                 </p>
               </div>
@@ -307,11 +304,11 @@
 
 
 <!--BEGIN PRICESTOCK BLOCK-->
-  <?/*=
+  <?=
     \app\core\PageElements::vidgetPriceStock(
       $model->name
     );
-  */?>
+  ?>
 <!--END PRICEBLOCK BLOCK-->
 
 <!--TEST DRIVE VIDGET BEGIN-->
