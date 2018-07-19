@@ -275,7 +275,7 @@ Class company extends \app\core\Model
             $skidka = $this->value."% ";
         }
 
-        $bydget = number_format($this->bydget,0,'',' ')." руб.";
+        $bydget = number_format($this->bydget,0,'',' ')." руб.888";
         
 
         $this->title = str_replace("<model>", $car->model->brand->name.' '.$car->model->name, $this->title);
