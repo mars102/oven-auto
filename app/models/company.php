@@ -268,7 +268,7 @@ Class company extends \app\core\Model
         {
             $skidka = $this->max;
         }
-
+        /*SISKI*/
         $skidka = round($skidka,-3);
 
         $this->title = str_replace("<model>", $car->model->brand->name.' '.$car->model->name, $this->title);
