@@ -439,29 +439,20 @@
 						<p class="vidgets_title">Пробная поездка</p>
 
 				
-						<p class="vidgets_content" style="text-align: justify;">
+						<p class="vidgets_content" style="">
 							
-								Комплектация автомобиля <?=$complect->name;?> 
-								
-								включает в себя:
+								Автомобиль в коплектации <?=$complect->name;?>, 
 								<span class="low">
 									<?=\app\models\car_3_motor::getTypeForMotor($motor->type);?> 
 									<?=$motor->valve;?> клапанный двигатель
 								</span> c рабочии объемом 
 								<span class="low">
 									<?=($motor->size);?> л. 
-									(<?=($motor->power);?> л.с.)
-								</span>
-								;
-		    					КПП
+									(<?=($motor->power);?> л.с.)</span>, КПП
 		    					<span class="low">
-		    						<?=\app\models\car_3_motor::getTransmissionName($motor->transmission);?>
-		     					</span>
-			     				;
-		    					Привод 
+		    						<?=\app\models\car_3_motor::getTransmissionName($motor->transmission);?></span>, привод 
 		    					<span class="low">
-		    						<?=$motor->getSummaryPrivod();?>
-		    					</span>;
+		    						<?=$motor->getSummaryPrivod();?></span>.
 		    				
 						</p>
 						<div class="col-sm-6 but-block" >
